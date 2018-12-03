@@ -1,0 +1,7 @@
+{
+    "name": "ezgajups/calculator",
+    "description": "This demo package will do some calculations",
+    "type": "library",
+    "minimum-stability": "dev",
+    "require": {}
+}
