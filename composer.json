@@ -3,5 +3,17 @@
     "description": "This demo package will do some calculations",
     "type": "library",
     "minimum-stability": "dev",
-    "require": {}
+    "require": {},
+	"autoload": {
+		"psr-4": {
+			"Ezgajups\\Calculator\\": "src/"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Ezgajups\\Calculator\\Providers\\CalculatorServiceProvider"
+			]
+		}
+	}
 }
