@@ -2,6 +2,9 @@
 
 namespace Ezgajups\Calculator\Providers;
 
+use Ezgajups\Calculator\Controllers\CalculatorController;
+use Ezgajups\Calculator\Exceptions\Handler;
+use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Support\ServiceProvider;
 
 class CalculatorServiceProvider extends ServiceProvider
@@ -14,6 +17,10 @@ class CalculatorServiceProvider extends ServiceProvider
     public function boot()
     {
         include __DIR__.'/../routes.php';
+//        app()->singleton(
+//            ExceptionHandler::class,
+//            Handler::class
+//        );
     }
 
     /**
@@ -23,7 +30,7 @@ class CalculatorServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->make(\Ezgajups\Calculator\Controllers\CalculatorController::class);
+        $this->app->make(CalculatorController::class);
         $this->loadViewsFrom(__DIR__.'/../views', 'calculator');
     }
 }
