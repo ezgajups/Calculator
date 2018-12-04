@@ -3,8 +3,6 @@
 namespace Ezgajups\Calculator\Providers;
 
 use Ezgajups\Calculator\Controllers\CalculatorController;
-use Ezgajups\Calculator\Exceptions\Handler;
-use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Support\ServiceProvider;
 
 class CalculatorServiceProvider extends ServiceProvider
